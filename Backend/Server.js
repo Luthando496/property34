@@ -6,12 +6,10 @@ const app = express()
 const cors = require('cors')
 const mongoose = require('mongoose')
 const morgan = require('morgan')
-const bodyparser = require('body-parser')
 const house = require('./Routes/house')
 
 
 app.use(express.json())
-app.use(bodyparser())
 app.use(morgan('dev'))
 
 
