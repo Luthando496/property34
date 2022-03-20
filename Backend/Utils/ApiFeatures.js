@@ -8,7 +8,7 @@ class ApiFeatures {
     
     search() {
         const keyword = this.queryString.keyword ? {
-            name:{
+            location:{
                 $regex: this.queryString.keyword,
                 $options: 'i'
             }
@@ -44,6 +44,28 @@ class ApiFeatures {
         return this
 
     }
+    limitFields() {
+        if (this.queryString.fields) {
+          const fields = this.queryString.fields.split(',').join(' ');
+          console.log(fields)
+          this.query = this.query.select(fields);
+        } else {
+          this.query = this.query.select('-__v');
+        }
+    
+        return this;
+    }
+    sort() {
+        if (this.queryString.sort) {
+          const sortBy = this.queryString.sort.split(',').join(' ');
+          console.log(sortBy)
+          this.query = this.query.sort(sortBy);
+        } else {
+          this.query = this.query.sort('-createdAt');
+        }
+    
+        return this;
+      }
 
     pagination(resPerPage){
         const currPage = Number(this.queryString.page) || 1;

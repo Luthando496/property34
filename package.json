@@ -7,9 +7,9 @@
     "dev": "SET NODE_ENV=DEVELOPMENT& nodemon Backend/server.js",
     "prod": "SET NODE_ENV=PRODUCTION& nodemon Backend/server",
     "start": "nodemon Backend/Server.js",
-    "seeder": "node Backend/seeder",
-    "data": "node Backend/seeder -d",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix front && npm run build --prefix front"
+    "data": "node Backend/seeder",
+    "destroy": "node Backend/seeder -d",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix house && npm run build --prefix house"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.0",

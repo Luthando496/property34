@@ -1,4 +1,6 @@
 {
     "html-css-class-completion.enableEmmetSupport": true,
-    "html.suggest.html5": true
+    "html.suggest.html5": true,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"}
 }

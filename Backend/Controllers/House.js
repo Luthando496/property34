@@ -78,10 +78,10 @@ next()
 exports.getHouse=async(req,res,next)=>{
         try{
     
-            const resPerPage = 4;
+            const resPerPage = 15;
     
             
-            const apiFeatures = new ApiFeatures(House.find(),req.query).search().filter().pagination(resPerPage)
+            const apiFeatures = new ApiFeatures(House.find(),req.query).search().filter().pagination(resPerPage).limitFields().sort()
     
             // console.log(await apiFeatures)
             const house = await apiFeatures.query
