@@ -1,22 +1,24 @@
 
 # dependencies
 node_modules/
-/front/node_modules/
+/house/node_modules/
 
 
 # testing
 /coverage
 
+
+# No modules
+node_modules
 # production
 /house/build
 
 # misc
 .env
-/Back/Config/config.env
-/front/.env.local
-/front/.env.development.local
-/front/.env.test.local
-/front/.env.production.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 npm-debug.log*
 yarn-debug.log*
