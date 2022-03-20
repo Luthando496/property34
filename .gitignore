@@ -8,8 +8,6 @@ node_modules
 /coverage
 
 
-# No modules
-node_modules/
 
 # production
 /house/build
